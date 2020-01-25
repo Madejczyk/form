@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const db = require('./db');
+const eventRouter = require('./routes/event-router');
 
 const app = express();
 const API_PORT = 8080;
@@ -16,5 +17,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
+
+app.use('/api', eventRouter);
 
 app.listen(API_PORT, () => console.log(`Server running on port ${API_PORT}`));
