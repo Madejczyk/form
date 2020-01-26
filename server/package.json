@@ -1,8 +1,9 @@
 {
-  "name": "form",
+  "name": "form-server",
   "version": "1.0.0",
-  "description": "Basic form",
+  "description": "Basic form - server side",
   "main": "index.js",
+  "author": "Jakub Madejczyk",
   "license": "MIT",
   "scripts": {
     "eslint": "./node_modules/eslint/bin/eslint.js --ext .jsx,.js ./",
